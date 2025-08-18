@@ -24,7 +24,7 @@ function App () {
 
         useEffect(() => () => console.log('desmontar'));
 
-    const onClickButton = () => {        
+    const onClickPlus = () => {        
         setCount(count + 1);
     }
 
@@ -41,7 +41,7 @@ function App () {
         <>        
         <p>{count}{name}</p>
         <Button onClick={onClickMinus} />
-        <Button onClick={onClickButton} />
+        <Button onClick={onClickPlus} />
         </>
     )
 }
