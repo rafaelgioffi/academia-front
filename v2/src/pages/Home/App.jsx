@@ -1,16 +1,20 @@
 import React from "react";
-import Button from "../../components/Button";
+import Header from "../../components/Header";
+import PageTitle from "../../components/PageTitle";
 
 function App() {
-  const onClickButton = () => {
-    console.log("Clicou no botão");
-  };
+  const actionButtonProps = {
+    label: "Novo Projeto",
+    action: () => 
+      console.log("clicou 'Novo projeto'")
+    }  
 
   return (
     <>
-      <Button onClick={onClickButton} />
+      <Header />
+      <PageTitle title="Projetos" actionButton={actionButtonProps} />
     </>
-  );
+  )
 }
 
 export default App;
