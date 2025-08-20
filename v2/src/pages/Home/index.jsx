@@ -1,13 +1,17 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 import Header from "../../components/Header";
 import PageTitle from "../../components/PageTitle";
 import ProjectTable from "../../containers/ProjectTable";
 import { PROJECT_DATA } from './constants';
+import { ROUTES_PATH } from "../../commons/constants/routes-path";
 
 function App() {
+  const navigate = useNavigate()
+
   const actionButtonProps = {
     label: "Novo Projeto",
-    action: () => console.log("clicou 'Novo projeto"),
+    action: () => navigate(`${ROUTES_PATH.project}/novo-projeto`)
   };
 
   return (
