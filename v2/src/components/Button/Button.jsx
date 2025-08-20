@@ -1,14 +1,13 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { SMALL_SIZE_BUTTON } from "./constants";
-import "./styles.css"
+import React from 'react';
+import PropTypes from 'prop-types';
+import { SMALL_SIZE_BUTTON } from './constants';
+import './styles.css'
 
-function Button({ onClick, size, label }) {
-  const sizeButton =
-    size === SMALL_SIZE_BUTTON ? "small-button" : "large-button"
+function Button({ size, label, onClick }) {
+  const sizeButton = size === SMALL_SIZE_BUTTON ? "small-button" : "large-button"
 
   return (
-    <button onClick={onClick} className={'button-pattern ${sizeButton}'}>
+    <button onClick={onClick} className={`button-pattern ${sizeButton}`}>
       <span>{label}</span>
     </button>
   )
@@ -17,7 +16,7 @@ function Button({ onClick, size, label }) {
 Button.propTypes = {
   label: PropTypes.string.isRequired,
   size: PropTypes.oneOf(['small', 'large']),
-  onClick: PropTypes.func,
+  onClick: PropTypes.func
 }
 
 Button.defaultProps = {

@@ -8,7 +8,7 @@ function PageTitle({ title, actionButton }) {
     <div className="page-title-container">
         <h1>{title}</h1>
         {actionButton && (
-          <Button label={actionButton.label} size="small" onclick={actionButton.action} />          
+          <Button label={actionButton.label} size="small" onClick={actionButton.action} />          
         )}
     </div>
   )
@@ -19,7 +19,7 @@ PageTitle.propTypes = {
     actionButton: PropTypes.shape({
         label: PropTypes.string,
         action: PropTypes.func
-    }),
+    })
 }
 
 export default PageTitle;
