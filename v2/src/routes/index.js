@@ -1,6 +1,6 @@
-import Home from '../pages/Home'
-import Project from '../pages/Projects/Register'
-import Users from '../pages/Users/Register'
+import Home from './home'
+import Project from './project'
+import Users from './user'
 
 const routes = [...Home, ...Project, ...Users]
 

@@ -1,0 +1,1 @@
+export const BLACK_SQUEZEE = '#F9F8FD'

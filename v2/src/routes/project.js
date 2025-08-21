@@ -1,8 +1,8 @@
 import { lazy } from "react";
-import { ROUTES_PATH } from "../commons/constants/routes-path";
+import { ROUTES_PATH } from "commons/constants/routes-path";
 
-const RegisterProject = lazy(async () => await import("./pages/Projects/Register"));
-const EditProject = lazy(async () => await import("./pages/Projects/Edit"));
+const RegisterProject = lazy(async () => await import("pages/Projects/Register"));
+const EditProject = lazy(async () => await import("pages/Projects/Edit"));
 
 const project = [
   {

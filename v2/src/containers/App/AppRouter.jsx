@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import AppLayout from "./AppLayout";
-import listRoutes from "../../routes";
+import listRoutes from "routes";
 
 function AppRouter() {
   return (

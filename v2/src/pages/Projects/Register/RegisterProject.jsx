@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { ROUTES_PATH } from "../../../commons/constants/routes-path";
+import { ROUTES_PATH } from "commons/constants/routes-path";
 
 function RegisterProject() {
     const navigate = useNavigate();
