@@ -1,22 +1,24 @@
 import React from "react";
 import PropTypes from "prop-types";
 import TableItem from "./TableItem";
-import { TableLineStyled } from "./styles";
+import { ActionColunmStyled, TableContainerStyled, ValueColunmStyled } from "./styles";
+import { Grid, Typography } from "@mui/material";
+import { SANTAS_GRAY } from "commons/constants/colors";
 
 function ProjectTable({ projectData }) {
   return (
-    <div className="table-container">
-      <div className="row">
-        <div className="col-7 description-colunm">
-          <h4>Título</h4>
-        </div>
-        <div className="col-3 value-colunm">
-          <h4>Custo Total</h4>
-        </div>
-        <div className="col-2 action-colunm">
-          <h4>Ações</h4>
-        </div>
-      </div>
+    <TableContainerStyled>
+      <Grid container>
+        <Grid item xs={7}>
+          <Typography color={SANTAS_GRAY} fontWeight="bold">Título</Typography>
+        </Grid>
+        <ValueColunmStyled item xs={3}>
+          <Typography color={SANTAS_GRAY} fontWeight="bold">Custo Total</Typography>
+        </ValueColunmStyled>
+        <ActionColunmStyled item xs={2}>
+          <Typography color={SANTAS_GRAY} fontWeight="bold">Ações</Typography>
+        </ActionColunmStyled>
+      </Grid>
       {projectData?.map(({ name, description, value }) => (
         <TableItem
           key={name}
@@ -25,7 +27,7 @@ function ProjectTable({ projectData }) {
           value={value}
         />
       ))}
-    </div>
+    </TableContainerStyled>
   );
 }
 
