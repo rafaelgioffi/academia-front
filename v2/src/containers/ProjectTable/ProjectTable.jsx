@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import TableItem from "./TableItem";
-import "./style.css";
+import { TableLineStyled } from "./styles";
 
 function ProjectTable({ projectData }) {
   return (
