@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactComponent as UserRegisterBG } from 'assets/images/bg-user.svg'
+import { ReactComponent as UserRegisterBG } from 'assets/images/bg-register-user.svg'
 import Layout from "containers/Layout/Layout";
 import { useNavigate } from "react-router-dom";
 import { ROUTES_PATH } from "commons/constants/routes-path";
