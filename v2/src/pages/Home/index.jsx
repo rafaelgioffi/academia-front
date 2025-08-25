@@ -12,12 +12,17 @@ function App() {
     label: "Novo Projeto",
     action: () => navigate(`${ROUTES_PATH.project}/novo-projeto`)
   };
+  const actionButtonProps2 = {
+    label: "Novo Usuário",
+    action: () => navigate(`${ROUTES_PATH.user}/novo-usuario`)
+  };
 
   return (
     <>      
       <div style={{ display: "flex", justifyContent: "center", with: "100%" }}>
         <div style={{ with: "800px", paddingTop: "48px" }}>
-          <PageTitle title="Projetos" actionButton={actionButtonProps} />
+          <PageTitle title="Projetos" actionButton={actionButtonProps}/>
+          <PageTitle title="" actionButton={actionButtonProps2} />
           <ProjectTable projectData={PROJECT_DATA} />
         </div>
       </div>

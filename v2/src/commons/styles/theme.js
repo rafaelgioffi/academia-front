@@ -15,8 +15,9 @@ const theme = {
                 U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC;
         }
                 body: {
-                    margin: 0,
-                    padding: 0
+                    margin: 0;
+                    padding: 0;
+                    overflow: hidden;
         }
                     `,
         }

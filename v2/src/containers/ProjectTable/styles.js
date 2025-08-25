@@ -8,7 +8,7 @@ export const TableLineStyled = styled(Grid)`
     &:last-child {
         border: none;
     }
-`
+`;
 
 export const ValueColunmStyled = styled(Grid)`
 display: flex;
