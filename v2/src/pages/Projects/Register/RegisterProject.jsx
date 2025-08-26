@@ -37,16 +37,14 @@ function RegisterProject() {
           className="w-50 py-2"
           size="large"
           
-          onClick={() => navigate(ROUTES_PATH.project)}
-        >
+          onClick={() => navigate(ROUTES_PATH.project)}>
           Cadastrar
         </Button>
         <Button
           className="w-50"
           size="large"
           
-          onClick={() => navigate(ROUTES_PATH.home)}
-        >
+          onClick={() => navigate(ROUTES_PATH.home)}>
           Voltar
         </Button>
       </div>

@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import { Grid, Typography, IconButton } from "@mui/material";
 import { ReactComponent as PencilIcon } from "assets/images/icon-pencil.svg";
 import { ReactComponent as TrashIcon } from "assets/images/icon-trash.svg";
+import { useNavigate } from "react-router-dom";
+import { ROUTES_PATH } from "commons/constants/routes-path";
 import {
   TableLineStyled,
   ActionColunmStyled,
@@ -11,6 +13,8 @@ import {
 import { formatCurrency } from "commons/utils/money";
 
 function TableItem({ name, description, value }) {
+  const navigate = useNavigate();
+
   return (
     <TableLineStyled container>
       <Grid item xs={7}>
@@ -25,7 +29,7 @@ function TableItem({ name, description, value }) {
         </Typography>
       </ValueColunmStyled>
       <ActionColunmStyled item xs={2}>
-        <IconButton onClick={() => console.log("editar")}>
+        <IconButton onClick={() => navigate(ROUTES_PATH.project + '/123')}>
         <PencilIcon />
         </IconButton>
         <IconButton onClick={() => console.log("remover")}>
