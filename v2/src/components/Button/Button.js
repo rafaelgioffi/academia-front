@@ -13,7 +13,7 @@ font-weight: bold;
 
 ButtonPatternsStyled.defaultProps = {
   disableElevation: true,
-  variant: "contained",  
+  variant: 'contained',
 };
 
 export default ButtonPatternsStyled;
