@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import { Button } from '@mui/material';
+import styled from "styled-components";
+import { Button } from "@mui/material";
 
-const ButtonPatternsStyled = styled(Button)`
+const ButtonPattensStyled = styled(Button)`
 && {
 height: 40px;
 border-radius: 40px;
@@ -11,9 +11,9 @@ font-weight: bold;
 }
 `
 
-ButtonPatternsStyled.defaultProps = {
+ButtonPattensStyled.defaultProps = {
   disableElevation: true,
-  variant: 'contained',
+  variant: "contained",
 };
 
-export default ButtonPatternsStyled;
+export default ButtonPattensStyled;

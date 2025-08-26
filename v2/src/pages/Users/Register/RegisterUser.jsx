@@ -3,7 +3,7 @@ import { ReactComponent as UserRegisterBG } from "assets/images/bg-register-user
 import Layout from "containers/Layout/Layout";
 import { useNavigate } from "react-router-dom";
 import { ROUTES_PATH } from "commons/constants/routes-path";
-import { Button } from "components/Button";
+import Button from "components/Button";
 import {  
   Typography,
   RadioGroup,
@@ -57,7 +57,7 @@ function RegisterUser() {
       </div>
       <div className="w-75 mb-3">
         <Button
-          className="w-50"
+          className="w-25 py-2"
           size="large"
           fullWidth
           onClick={() => navigate(ROUTES_PATH.project)}
