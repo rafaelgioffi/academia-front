@@ -57,17 +57,17 @@ function RegisterUser() {
       </div>
       <div className="w-75 mb-3">
         <Button
-          className="w-25 py-2"
+          className="w-50 py-2"
           size="large"
-          fullWidth
-          onClick={() => navigate(ROUTES_PATH.project)}
+          
+          onClick={() => navigate(ROUTES_PATH.user)}
         >
           Cadastrar
         </Button>
         <Button
           className="w-50"
           size="large"
-          fullWidth
+          
           onClick={() => navigate(ROUTES_PATH.home)}
         >
           Voltar
