@@ -3,9 +3,10 @@ import { TextField, Typography } from "@mui/material";
 import { Field } from "formik";
 
 function Input(props) {
+  return (
   <Field {...props}>
     {({ field, meta }) => (
-      <div className="mb-2">
+      <div className="mb-1">
         <TextField
           label={props.label}
           inputProps={{ ...field, ...props }}
@@ -13,13 +14,16 @@ function Input(props) {
           variant="standard"
         />
         {meta.touched && meta.errors && (
-          <div className="p-relative" variant="caption" color="error">
-            <Typography className="p.absolute">{meta.error}</Typography>}
+          <div className="p-relative">
+            <Typography className="p.absolute" variant="caption" color="error">
+              {meta.error}
+            </Typography>            
           </div>
         )}
       </div>
     )}
-  </Field>;
+  </Field>
+  );
 }
 
 export default Input;
