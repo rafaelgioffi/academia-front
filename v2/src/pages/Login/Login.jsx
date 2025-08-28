@@ -22,7 +22,7 @@ function RegisterUser() {
       <Formik
         onSubmit={onSubmit}
         initialValues={INITIAL_VALUES}
-        validateSchema={validateForm}
+        validationSchema={validateForm}
       >
         {({ handleSubmit }) => (
           <Form onSubmit={handleSubmit}>
