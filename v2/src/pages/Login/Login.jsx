@@ -10,7 +10,7 @@ import { Formik, Form } from "formik";
 import { validateForm } from "./schemas";
 import { INITIAL_VALUES } from "./constants";
 
-function RegisterUser() {
+function Login() {
   const navigate = useNavigate();
 
   const onSubmit = () => {
@@ -46,10 +46,10 @@ function RegisterUser() {
                 Entrar
               </Button>
               <Button
-                className="w-50 py-3"
+                className="w-50 py-3 mb-3"
                 size="large"
                 variant="text"
-                onClick={() => navigate(ROUTES_PATH.user + "/novo-usuario")}
+                onClick={() => navigate(`${ROUTES_PATH.user}/novo-usuario`)}
               >
                 Cadastrar
               </Button>
@@ -61,4 +61,4 @@ function RegisterUser() {
   );
 }
 
-export default RegisterUser;
+export default Login;
