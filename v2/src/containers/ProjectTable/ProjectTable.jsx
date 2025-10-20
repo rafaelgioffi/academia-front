@@ -19,10 +19,10 @@ function ProjectTable({ projectData }) {
           <Typography color={SANTAS_GRAY} fontWeight="bold">Ações</Typography>
         </ActionColunmStyled>
       </Grid>
-      {projectData?.map(({ name, description, value }) => (
+      {projectData?.map(({ title, description, value }) => (
         <TableItem
-          key={name}
-          name={name}
+          key={title}
+          title={title}
           description={description}
           value={value}
         />
@@ -34,7 +34,7 @@ function ProjectTable({ projectData }) {
 ProjectTable.propTypes = {
   projectData: PropTypes.arrayOf(
     PropTypes.shape({
-      name: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
       value: PropTypes.number.isRequired,
     })

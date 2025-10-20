@@ -12,14 +12,14 @@ import {
 } from "./styles";
 import { formatCurrency } from "commons/utils/money";
 
-function TableItem({ name, description, value }) {
+function TableItem({ title, description, value }) {
   const navigate = useNavigate();
 
   return (
     <TableLineStyled container>
       <Grid item xs={7}>
         <Typography variant="h6" fontWeight="bold" gutterBottom>
-          {name}
+          {title}
         </Typography>
         <Typography variant="body1">{description}</Typography>
       </Grid>
@@ -41,7 +41,7 @@ function TableItem({ name, description, value }) {
 }
 
 TableItem.propTypes = {
-  name: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   value: PropTypes.number.isRequired,
 };
