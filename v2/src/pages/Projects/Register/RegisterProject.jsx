@@ -9,13 +9,17 @@ import Input from "components/Form/Input";
 import { Formik, Form } from "formik";
 import { INITIAL_VALUES } from "../constants";
 import { validateForm } from "../schemas";
-
+import ProjectServices from "services/projects";
 
 function RegisterProject() {
   const navigate = useNavigate();
 
-  const onSubmit = () => {
-    navigate(ROUTES_PATH.project);
+  const onSubmit = (values) => {
+    ProjectServices.saveProjects({...values, value: parseInt(values.value)})
+    .then(() => {
+      navigate(ROUTES_PATH.project);
+  })
+  .catch(err => alert(err.message))
   };
 
   return (
