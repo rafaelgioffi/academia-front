@@ -5,7 +5,7 @@ import { ActionColunmStyled, TableContainerStyled, ValueColunmStyled } from "./s
 import { Grid, Typography } from "@mui/material";
 import { SANTAS_GRAY } from "commons/constants/colors";
 
-function ProjectTable({ projectData }) {
+function ProjectTable({ projectData, onDelete }) {
   return (
     <TableContainerStyled>
       <Grid container>
@@ -25,6 +25,7 @@ function ProjectTable({ projectData }) {
           title={title}
           description={description}
           value={value}
+          onDelete={onDelete}
         />
       ))}
     </TableContainerStyled>
@@ -39,6 +40,7 @@ ProjectTable.propTypes = {
       value: PropTypes.number.isRequired,
     })
   ).isRequired,
+  onDelete: PropTypes.func.isRequired
 };
 
 export default ProjectTable;

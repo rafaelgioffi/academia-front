@@ -25,13 +25,21 @@ function ListProject() {
     action: () => navigate(`${ROUTES_PATH.project}/novo-projeto`),
   };
 
+  const onDelete = (idProject) => {
+    ProjectServices.deleteProject(idProject)
+    .then(() => {
+      console.log("Projeto excluído com sucesso");   
+    })
+    .catch((error) => console.log("Erro ao excluir projeto: ", error))
+   }
+
   return (
     <>
       <div style={{ display: "flex", justifyContent: "center", with: "100%" }}>
         <div style={{ with: "800px", paddingTop: "48px" }}>
           <PageTitle title="Projetos" actionButton={actionButtonProps} />
           {/* <ProjectTable projectData={PROJECT_DATA} /> */}
-          <ProjectTable projectData={projectList} />
+          <ProjectTable projectData={projectList} onDelete={onDelete} />
         </div>
       </div>
       <Button

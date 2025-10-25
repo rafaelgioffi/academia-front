@@ -51,7 +51,7 @@ function RegisterProject() {
             </div>
             <div className="w-75 mb-3">
               <Button
-                className="w-50 py-2"
+                className="w-50 py-2 mb-3"
                 size="large"
                 type="submit"
               >
