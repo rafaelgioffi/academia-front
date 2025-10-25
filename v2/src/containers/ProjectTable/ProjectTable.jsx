@@ -19,13 +19,14 @@ function ProjectTable({ projectData, onDelete }) {
           <Typography color={SANTAS_GRAY} fontWeight="bold">Ações</Typography>
         </ActionColunmStyled>
       </Grid>
-      {projectData?.map(({ title, description, value }) => (
+      {projectData?.map(({ title, description, value, id }) => (
         <TableItem
           key={title}
           title={title}
           description={description}
           value={value}
           onDelete={onDelete}
+          idProject={id}
         />
       ))}
     </TableContainerStyled>

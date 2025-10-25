@@ -11,14 +11,18 @@ function ListProject() {
   const navigate = useNavigate();
   const [projectList, setProjectList] = useState([]);
 
-  useEffect(() => {
-    ProjectServices.getProjects()
-    .then(({data}) => {
-      console.log('data', data)
-      setProjectList(data)
-    })
-    .catch((error) => console.log("Erro ao buscar projetos: ", error));
-  }, [])
+const getProjects = () => {
+ProjectServices.getProjects()
+.then(({data}) => {
+  console.log('data', data)
+  setProjectList(data)
+})
+.catch((error) => console.log("Erro ao buscar projetos: ", error));
+}
+
+useEffect(() => {
+  getProjects()
+}, [])
 
   const actionButtonProps = {
     label: "Novo Projeto",
@@ -28,7 +32,7 @@ function ListProject() {
   const onDelete = (idProject) => {
     ProjectServices.deleteProject(idProject)
     .then(() => {
-      console.log("Projeto excluído com sucesso");   
+      getProjects()
     })
     .catch((error) => console.log("Erro ao excluir projeto: ", error))
    }
