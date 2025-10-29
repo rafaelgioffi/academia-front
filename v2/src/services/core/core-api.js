@@ -3,7 +3,7 @@ import { parse, stringify } from 'qs'
 import { onResponseSuccess, onResponseError } from './interceptors'
 
 const api = axios.create({
-    baseUrl: 'http://localhost:8080/api',
+    baseUrl: 'https://localhost:7198/api',
     paramsSerializer: {
         encode: parse,
         serialize: stringify

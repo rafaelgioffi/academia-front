@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Grid, Typography, IconButton } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 import { ReactComponent as PencilIcon } from "assets/images/icon-pencil.svg";
 import { ReactComponent as TrashIcon } from "assets/images/icon-trash.svg";
 // import { useNavigate } from "react-router-dom";
@@ -11,9 +12,10 @@ import {
   ValueColunmStyled,
 } from "./styles";
 import { formatCurrency } from "commons/utils/money";
+import { ROUTES_PATH } from "commons/constants/routes-path";
 
 function TableItem({ title, description, value, ondelete, idProject }) {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   return (
     <TableLineStyled container>
@@ -30,7 +32,7 @@ function TableItem({ title, description, value, ondelete, idProject }) {
       </ValueColunmStyled>
       <ActionColunmStyled item xs={2}>
         {/* <IconButton onClick={() => navigate(ROUTES_PATH.project + '/123')}> */}
-        <IconButton onClick={() => console.log("editar")}>
+        <IconButton onClick={() => navigate(ROUTES_PATH.project/idProject)}>
         <PencilIcon />
         </IconButton>
         <IconButton onClick={() => ondelete(idProject)}>
