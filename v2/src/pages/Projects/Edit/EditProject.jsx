@@ -34,6 +34,7 @@ function EditProject() {
         onSubmit={onSubmit}
         initialValues={selectedProject ?? INITIAL_VALUES}
         validationSchema={validateForm}
+        enableReinitialize // Permite que o Formik atualize os valores iniciais quando selectedProject mudar
       >
         {({ handleSubmit }) => (
           <Form onSubmit={handleSubmit}>
