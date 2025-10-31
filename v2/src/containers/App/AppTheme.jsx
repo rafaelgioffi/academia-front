@@ -5,7 +5,7 @@ import  CssBaseline from "@mui/material/CssBaseline";
 import baseTheme from "commons/styles/theme";
 import GlobalStyle from "commons/styles/global-styles";
 
-const theme = createTheme(baseTheme);
+export const theme = createTheme(baseTheme);
 
 function AppTheme({ children }) {
   return (
