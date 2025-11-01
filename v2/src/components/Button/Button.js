@@ -1,19 +1,15 @@
-import styled from "styled-components";
 import { Button } from "@mui/material";
 
-const ButtonPattensStyled = styled(Button)`
-&& {
-height: 40px;
-border-radius: 40px;
-text-transform: inherit;
-font-size: 14px;
-font-weight: bold;
-}
-`
-
-ButtonPattensStyled.defaultProps = {
+Button.defaultProps = {
   disableElevation: true,
   variant: "contained",
+  style: {
+    height: "40px",
+    borderRadius: "40px",
+    textTransform: "inherit",
+    fontSize: "14px",
+    fontWeight: "bold",
+  }
 };
 
-export default ButtonPattensStyled;
+export default Button;

@@ -6,17 +6,22 @@ import Button from "../Button";
 const onClick = jest.fn();
 
 function mountComponent() {
-  return renderWithTheme(<Button onClick={onClick}>Test</Button>
+  return renderWithTheme(<Button data-testid="test-button" onClick={onClick}>Test</Button>
     );
 }
 
 afterEach(cleanup);
 
 describe("[components] Button", () => {
-    const {container} = mountComponent();
+    const {container, getByTestId } = mountComponent();
 
   it("should render Button", () => {
     expect(container).toBeTruthy();
-    expect(container).toHaveTextContent("Test")
+    expect(container).toHaveTextContent("Test");
+
+    expect(getByTestId("test-button")).toHaveStyle("font-weight: bold");
+    expect(getByTestId("test-button")).toHaveStyle("height: 40px");
+    expect(getByTestId("test-button")).toHaveStyle("border-radius: 40px");
+    expect(getByTestId("test-button")).toHaveStyle("text-transform: inherit");
   });
 });
