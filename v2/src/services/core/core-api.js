@@ -14,6 +14,6 @@ api.interceptors.response.use(onResponseSuccess, onResponseError)
 
 api.defaults.headers.common.Accept = 'application/json'
 api.defaults.headers.common['Content-Type'] = 'application/json'
-api.defaults.hea.common.credentials = 'include'
+api.defaults.headers.common.credentials = 'include'
 
 export default api
